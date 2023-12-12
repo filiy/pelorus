@@ -90,10 +90,10 @@ objects:
           image: ubi9/toolbox
           script: |
             set -ex
+            git config --global --add safe.directory /workspace/debug
             find /workspace
             cd /workspace/debug 
             git remote -vv
-            git config --global --add safe.directory /workspace/debug 
             git log -n 1
         - name: time-last-commit
           image: ubi9/toolbox
