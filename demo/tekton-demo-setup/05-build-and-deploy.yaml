@@ -69,7 +69,7 @@ objects:
           storage: 500Mi
 
   - kind: Task
-    apiVersion: tekton.dev/v1beta1
+    apiVersion: tekton.dev/v1
     metadata:
       name: debug
       namespace: ${NAMESPACE}
@@ -112,7 +112,7 @@ objects:
             cat "$(results.commit-time.path)"
 
   - kind: Pipeline
-    apiVersion: tekton.dev/v1beta1
+    apiVersion: tekton.dev/v1
     metadata:
       name: ${APPLICATION_NAME}-pipeline
       namespace: ${NAMESPACE}
